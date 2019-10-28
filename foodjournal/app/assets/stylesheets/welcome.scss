@@ -1,3 +1,16 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner {
+    width:100%;
+    min-height:189px;
+    background-repeat: no-repeat;
+    background-image: url('header_image.png');
+    background-size: cover;
+}
+
+main{
+    font-family: Arial;
+    margin: 2px;
+}
