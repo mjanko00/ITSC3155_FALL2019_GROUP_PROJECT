@@ -1,8 +1,4 @@
-class JournalController < ApplicationController
-    def index
-        @journal = Journal.all
-    end
-    
+class JournalsController < ApplicationController
     def show
         @journal = Journal.find(params[:id])
     end
@@ -15,10 +11,11 @@ class JournalController < ApplicationController
         
         @journal.save
         redirect_to @journal
+        #render plain: params[:journal].inspect
     end
 end
 
 private
     def journal_params
-        params.require(:journal).permit(:title, :text)
+    params.require(:journal).permit(:title, :text)
     end
