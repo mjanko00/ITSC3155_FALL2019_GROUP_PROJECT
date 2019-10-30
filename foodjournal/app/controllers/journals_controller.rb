@@ -13,6 +13,10 @@ class JournalsController < ApplicationController
         redirect_to @journal
         #render plain: params[:journal].inspect
     end
+    
+    def edit
+        @journal = Journal.find(params[:id])
+    end
 end
 
 private
