@@ -4,14 +4,18 @@ class JournalsController < ApplicationController
     end
     
     def new
+        @journal = Journal.new
     end
     
     def create
         @journal = Journal.new(journal_params)
         
-        @journal.save
-        redirect_to @journal
-        #render plain: params[:journal].inspect
+     if @journal.save
+         redirect_to @journal
+     else
+         render 'new'
+     end
+   
     end
     
     def edit
@@ -26,6 +30,10 @@ class JournalsController < ApplicationController
             render 'edit' 
         end 
     end
+    
+     def index
+        @journals = Journal.all
+     end
 end
 
 private

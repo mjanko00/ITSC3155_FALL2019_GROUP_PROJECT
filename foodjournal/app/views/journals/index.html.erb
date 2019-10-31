@@ -8,25 +8,24 @@
 
 
 <p>
-<table>
-  <tr>
-    <th>Meal Type</th>
-    <th>Food Name</th>
-    <th>Serving Size</th>
-    <th>Calories</th>
-    <th>Carbohydrates</th>
-    <th>Fat</th>
-    <th>Protein</th>
-  </tr>
-   <tr>
-      <td>Breakfast</td>
-      <td>Oatmeal</td>
-      <td>1</td>
-      <td>350</td>
-      <td>24g</td>
-      <td>8g</td>
-      <td>6g</td>
-  </tr>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+    
+  <% @journals.each do |journal| %>
+    <tr>
+      <td><%= journal.title %></td>
+      <td><%= journal.text %></td>
+      <td><%= link_to 'Show', journal_path(journal) %></td>
+      <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
+    </tr>
+  <% end %>
+  
+  </table>
+  
   </main>
 </body>
   
