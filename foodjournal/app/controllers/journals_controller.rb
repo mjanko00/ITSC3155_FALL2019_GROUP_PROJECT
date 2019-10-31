@@ -17,6 +17,15 @@ class JournalsController < ApplicationController
     def edit
         @journal = Journal.find(params[:id])
     end
+    
+    def update 
+        @journal = Journal.find(params[:id]) 
+        if @journal.update(journal_params) 
+            redirect_to @journal 
+        else 
+            render 'edit' 
+        end 
+    end
 end
 
 private
