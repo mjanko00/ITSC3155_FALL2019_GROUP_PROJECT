@@ -14,11 +14,20 @@ class JournalsController < ApplicationController
     def create
         @journal = Journal.new(journal_params)
         
+<<<<<<< HEAD
         if @journal.save 
             redirect_to @journal
         else 
             render 'new' 
         end
+=======
+     if @journal.save
+         redirect_to @journal
+     else
+         render 'new'
+     end
+   
+>>>>>>> 3fd556b1c923f3e317c33aae682305b57121761a
     end
     
     def edit
@@ -33,6 +42,10 @@ class JournalsController < ApplicationController
             render 'edit' 
         end 
     end
+    
+     def index
+        @journals = Journal.all
+     end
 end
 
 private
