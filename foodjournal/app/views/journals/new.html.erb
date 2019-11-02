@@ -5,14 +5,40 @@
 <main>
 <h1>New Food Journal Entry</h1>
 <%= form_for :journal, url: journals_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+ 
+    <p>
+    <%= f.label :food_item, "Food Item" %><br>
+    <%= f.text_field :food_item %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :meal_type , "Meal Type" %><br>
+    <%= f.text_area :meal_type %>
+  </p>
+ 
+  <p>
+    <%= f.label :serving, "Serving Size" %><br>
+    <%= f.text_field :serving %>
+  </p>
+
+  <p>
+    <%= f.label :cal , "Calories" %><br>
+    <%= f.text_area :cal %>
+  </p>
+ 
+  <p>
+    <%= f.label :prot, "	Protiens" %><br>
+    <%= f.text_field :prot %>
+  </p>
+
+  <p>
+    <%= f.label :carbs, "Carbs"  %><br>
+    <%= f.text_area :carbs %>
+  </p>
+ 
+ <p>
+    <%= f.label :fats, "Fats"  %><br>
+    <%= f.text_area :fats %>
   </p>
  
   <p>
@@ -22,3 +48,4 @@
 <%= link_to 'Back', journals_path %>
 </main>
 </body>
+

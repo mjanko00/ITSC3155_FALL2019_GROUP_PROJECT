@@ -23,13 +23,13 @@
     
   <% @journals.each do |journal| %>
     <tr>
-      <td><%= journal.title %></td>
-      <td><%= journal.text %></td>
-      <td><%= journal.text %></td>
-      <td><%= journal.text %></td>
-      <td><%= journal.text %></td>
-      <td><%= journal.text %></td>
-      <td><%= journal.text %></td>
+      <td><%= journal.food_item %></td>
+      <td><%= journal.meal_type %></td>
+      <td><%= journal.serving %></td>
+      <td><%= journal.cal %></td>
+      <td><%= journal.prot %></td>
+      <td><%= journal.carbs %></td>
+      <td><%= journal.fats %></td>
       <td><%= link_to 'Show', journal_path(journal) %> &nbsp;
           <%= link_to 'Edit', edit_journal_path(journal) %> &nbsp;
           <%= link_to 'Delete', 
