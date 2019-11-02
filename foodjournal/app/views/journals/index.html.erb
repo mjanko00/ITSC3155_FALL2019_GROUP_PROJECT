@@ -11,16 +11,31 @@
 
   <table>
     <tr>
-      <th>Title</th>
-      <th>Text</th>
+      <th>Food Item</th>
+      <th>Meal Type</th>
+      <th>Serving Size</th>
+      <th>Calories</th>
+      <th>Protiens</th>
+      <th>Carbs</th>
+      <th>Fats</th>
+      <th>Tools</th>
     </tr>
     
   <% @journals.each do |journal| %>
     <tr>
       <td><%= journal.title %></td>
       <td><%= journal.text %></td>
-      <td><%= link_to 'Show', journal_path(journal) %></td>
-      <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
+      <td><%= journal.text %></td>
+      <td><%= journal.text %></td>
+      <td><%= journal.text %></td>
+      <td><%= journal.text %></td>
+      <td><%= journal.text %></td>
+      <td><%= link_to 'Show', journal_path(journal) %> &nbsp;
+          <%= link_to 'Edit', edit_journal_path(journal) %> &nbsp;
+          <%= link_to 'Delete', 
+                                journal_path(journal), 
+                                method: :delete, 
+                                data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   
