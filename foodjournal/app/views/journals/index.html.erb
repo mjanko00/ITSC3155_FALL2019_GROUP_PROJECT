@@ -11,11 +11,11 @@
 
   <table>
     <tr>
-      <th>Food Item</th>
       <th>Meal Type</th>
+      <th>Food Item</th>
       <th>Serving Size</th>
       <th>Calories</th>
-      <th>Protiens</th>
+      <th>Proteins</th>
       <th>Carbs</th>
       <th>Fats</th>
       <th>Tools</th>
@@ -23,8 +23,8 @@
     
   <% @journals.each do |journal| %>
     <tr>
-      <td><%= journal.food_item %></td>
       <td><%= journal.meal_type %></td>
+      <td><%= journal.food_item %></td>
       <td><%= journal.serving %></td>
       <td><%= journal.cal %></td>
       <td><%= journal.prot %></td>

@@ -46,5 +46,5 @@ end
 
 private
     def journal_params
-        params.require(:journal).permit(:food_item, :meal_type, :serving, :cal, :prot, :carbs, :fats)
+        params.require(:journal).permit(:meal_type, :food_item, :serving, :cal, :prot, :carbs, :fats)
     end

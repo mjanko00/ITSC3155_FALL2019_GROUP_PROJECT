@@ -14,15 +14,14 @@
     </div>
   <% end %>
  
+   <p>
+    <%= f.label :meal_type , "Meal Type" %><br>
+    <%= f.text_field :meal_type %>
+  </p>
+ 
   <p>
-    <p>
     <%= f.label :food_item, "Food Item" %><br>
     <%= f.text_field :food_item %>
-  </p>
-
-  <p>
-    <%= f.label :meal_type , "Meal Type" %><br>
-    <%= f.text_area :meal_type %>
   </p>
  
   <p>
@@ -32,22 +31,22 @@
 
   <p>
     <%= f.label :cal , "Calories" %><br>
-    <%= f.text_area :cal %>
+    <%= f.text_field :cal %>
   </p>
  
   <p>
-    <%= f.label :prot, "	Protiens" %><br>
+    <%= f.label :prot, "	Proteins" %><br>
     <%= f.text_field :prot %>
   </p>
 
   <p>
     <%= f.label :carbs, "Carbs"  %><br>
-    <%= f.text_area :carbs %>
+    <%= f.text_field :carbs %>
   </p>
  
  <p>
     <%= f.label :fats, "Fats"  %><br>
-    <%= f.text_area :fats %>
+    <%= f.text_field :fats %>
   </p>
  
   <p>
