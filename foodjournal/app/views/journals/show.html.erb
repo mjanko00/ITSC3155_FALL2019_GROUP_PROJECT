@@ -1,38 +1,49 @@
-<p>
-    <strong>Meal Type:</strong>
-    <%= @journal.meal_type %>
-</p>
+<htnml>
+    <body>
+        <header class="banner">
+       
+        </header>
+        
+        <main class ="mainFont">
+         
+            <p>
+                <strong>Meal Type:</strong>
+                <%= @journal.meal_type %>
+            </p>
 
-<p>
-    <strong>Food Name::</strong>
-    <%= @journal.food_item %>
-</p>
+            <p>
+                <strong>Food Name:</strong>
+                <%= @journal.food_item %>
+            </p>
 
-<p>
-    <strong>Serving Size:</strong>
-    <%= @journal.serving %>
-</p>
+            <p>
+                <strong>Serving Size:</strong>
+                <%= @journal.serving %>
+            </p>
 
-<p>
-    <strong>Calories:</strong>
-    <%= @journal.cal %>
-</p>
+            <p>
+                <strong>Calories:</strong>
+                <%= @journal.cal %>
+            </p>
 
-<p>
-    <strong>Proteins:</strong>
-    <%= @journal.prot %>
-</p>
+            <p>
+                <strong>Proteins:</strong>
+                <%= @journal.prot %>
+            </p>
 
-<p>
-    <strong>Carbs:</strong>
-    <%= @journal.carbs %>
-</p>
+            <p>
+                <strong>Carbs:</strong>
+                <%= @journal.carbs %>
+            </p>
 
-<p>
-    <strong>Fats:</strong>
-    <%= @journal.fats %>
-</p>
+            <p>
+                <strong>Fats:</strong>
+                <%= @journal.fats %>
+            </p>
 
-<p>
-    <%= link_to 'Home', controller: 'journals' %>
-</p>
+            <p>
+                <%= link_to 'Home', controller: 'journals' %>
+            </p>
+        </main>
+    </body>
+</html>

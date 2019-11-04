@@ -1,51 +1,52 @@
-<body>
-<header class="banner">
-</header>
+<html>
+  <body>
+    <header class="banner">
+    </header>
 
-<main>
-<h1>New Food Journal Entry</h1>
-<%= form_for :journal, url: journals_path do |f| %>
+    <main class="mainFont">
+      <h1>New Food Journal Entry</h1>
+      <%= form_for :journal, url: journals_path do |f| %>
  
-   <p>
-    <%= f.label :meal_type , "Meal Type" %><br>
-    <%= f.select(:meal_type, options_for_select([['Breakfast', 'Breakfast'],['Lunch','Lunch'],['Dinner','Dinner'],['Snack','Snack']]), { include_blank: true}) %>
-  </p>
+         <p>
+           <%= f.label :meal_type , "Meal Type" %><br>
+          <%= f.select(:meal_type, options_for_select([['Breakfast', 'Breakfast'],['Lunch','Lunch'],['Dinner','Dinner'],['Snack','Snack']]), { include_blank: true}) %>
+        </p>
  
-    <p>
-    <%= f.label :food_item, "Food Item" %><br>
-    <%= f.text_field :food_item %>
-  </p>
+          <p>
+          <%= f.label :food_item, "Food Item" %><br>
+          <%= f.text_field :food_item %>
+        </p>
 
-  <p>
-    <%= f.label :serving, "Serving Size" %><br>
-    <%= f.text_field :serving %>
-  </p>
+        <p>
+          <%= f.label :serving, "Serving Size" %><br>
+          <%= f.text_field :serving %>
+        </p>
 
-  <p>
-    <%= f.label :cal , "Calories" %><br>
-    <%= f.text_field :cal %>
-  </p>
+        <p>
+          <%= f.label :cal , "Calories" %><br>
+          <%= f.text_field :cal %>
+        </p>
  
-  <p>
-    <%= f.label :prot, "	Proteins" %><br>
-    <%= f.text_field :prot %>
-  </p>
+        <p>
+          <%= f.label :prot, "	Proteins" %><br>
+          <%= f.text_field :prot %>
+        </p>
 
-  <p>
-    <%= f.label :carbs, "Carbs"  %><br>
-    <%= f.text_field :carbs %>
-  </p>
+        <p>
+          <%= f.label :carbs, "Carbs"  %><br>
+          <%= f.text_field :carbs %>
+        </p>
  
- <p>
-    <%= f.label :fats, "Fats"  %><br>
-    <%= f.text_field :fats %>
-  </p>
+       <p>
+          <%= f.label :fats, "Fats"  %><br>
+          <%= f.text_field :fats %>
+       </p>
  
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-<%= link_to 'Back', journals_path %>
-</main>
-</body>
-
+      <p>
+          <%= f.submit %>
+      </p>
+    <% end %>
+    <%= link_to 'Back', journals_path %>
+    </main>
+  </body>
+</html>

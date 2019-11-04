@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+    background-color: #c0b566;
+}
+
+.mainFont{
+    color: #0b1a04;
+    font-family: Arial;
+}
+
 .banner {
     width:100%;
     min-height:189px;
@@ -9,6 +18,7 @@
     background-image: url('header_image.png');
     background-size: cover;
 }
+
 
 main {
     font-family: Arial;
