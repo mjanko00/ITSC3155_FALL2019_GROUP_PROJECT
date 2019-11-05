@@ -1,15 +1,18 @@
 <html>
-  <body>
+  <body class ="mainFont">
     <header class = "banner">
     
     </header>
-    <main class="mainFont">
+    
+    <div class="main">
       <h1>Food Entries</h1>
+      
       <%= link_to 'New Journal Entry', new_journal_path %>
-
-      <p>
+      <br><br>
+      
+      <div class="tableDiv">
         <table>
-          <tr>
+          <tr id = "tableHeader">
             <th>Meal Type</th>
             <th>Food Item</th>
             <th>Serving Size</th>
@@ -29,7 +32,8 @@
             <td><%= journal.prot %></td>
             <td><%= journal.carbs %></td>
             <td><%= journal.fats %></td>
-            <td><%= link_to 'Show', journal_path(journal) %> &nbsp;
+            <td>
+                <%= link_to 'Show', journal_path(journal) %> &nbsp;
                 <%= link_to 'Edit', edit_journal_path(journal) %> &nbsp;
                 <%= link_to 'Delete', 
                                       journal_path(journal), 
@@ -38,7 +42,7 @@
           </tr>
         <% end %>
         </table>
-      </p>
-    </main>
+      </div>
+    </div>
   </body>
 </html>

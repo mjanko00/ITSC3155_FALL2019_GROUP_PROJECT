@@ -1,9 +1,9 @@
 <html>
-  <body>
+  <body class = "mainFont">
     <header class="banner">
     </header>
 
-    <main class="mainFont">
+    <div class="main">
       <h1>New Food Journal Entry</h1>
       <%= form_for :journal, url: journals_path do |f| %>
  
@@ -47,6 +47,6 @@
       </p>
     <% end %>
     <%= link_to 'Back', journals_path %>
-    </main>
+    </div>
   </body>
 </html>

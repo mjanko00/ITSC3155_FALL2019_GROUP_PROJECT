@@ -1,11 +1,12 @@
 <htnml>
-    <body>
+    <body class = "mainFont">
         <header class="banner">
        
         </header>
         
-        <main class ="mainFont">
+        <div class ="main">
          
+         <h2>Review your entry:</h2>
             <p>
                 <strong>Meal Type:</strong>
                 <%= @journal.meal_type %>
@@ -44,6 +45,6 @@
             <p>
                 <%= link_to 'Home', controller: 'journals' %>
             </p>
-        </main>
+        </div>
     </body>
 </html>
