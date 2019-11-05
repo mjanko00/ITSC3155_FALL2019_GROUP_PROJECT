@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+    background-color: #c0b566;
+}
+
+.mainFont{
+    color: #0b1a04;
+    font-family: Arial;
+}
+
 .banner {
     width:100%;
     min-height:189px;
@@ -10,18 +19,29 @@
     background-size: cover;
 }
 
-main {
-    font-family: Arial;
-    margin: 2px;
+.main {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
+
+}
+
+.tableDiv {
+    padding: 50px, 50px;
+   
 }
 
 table, th, td {
     border: 1px solid black;
+}
+
+#tableHeader{
+    background-color: #0b1a04;
+    color: white;
 }
 
 th, td {

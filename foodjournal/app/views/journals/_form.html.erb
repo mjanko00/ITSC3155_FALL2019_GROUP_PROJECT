@@ -1,0 +1,56 @@
+<%= form_for @journal do |f| %>
+ 
+  <% if @journal.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@journal.errors.count, "error") %> prohibited
+        this journal from being saved:
+      </h2>
+      <ul>
+        <% @journal.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+   <p>
+    <%= f.label :meal_type , "Meal Type" %><br>
+     <%= f.select(:meal_type, options_for_select([['Breakfast', 'Breakfast'],['Lunch','Lunch'],['Dinner','Dinner'],['Snack','Snack']]), { include_blank: true}) %>
+  </p>
+ 
+  <p>
+    <%= f.label :food_item, "Food Item" %><br>
+    <%= f.text_field :food_item %>
+  </p>
+ 
+  <p>
+    <%= f.label :serving, "Serving Size" %><br>
+    <%= f.text_field :serving %>
+  </p>
+
+  <p>
+    <%= f.label :cal , "Calories" %><br>
+    <%= f.text_field :cal %>
+  </p>
+ 
+  <p>
+    <%= f.label :prot, "	Proteins" %><br>
+    <%= f.text_field :prot %>
+  </p>
+
+  <p>
+    <%= f.label :carbs, "Carbs"  %><br>
+    <%= f.text_field :carbs %>
+  </p>
+ 
+ <p>
+    <%= f.label :fats, "Fats"  %><br>
+    <%= f.text_field :fats %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

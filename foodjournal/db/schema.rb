@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_172526) do
+ActiveRecord::Schema.define(version: 2019_11_02_210127) do
 
   create_table "journals", force: :cascade do |t|
-    t.string "title"
-    t.text "text"
+    t.string "food_item"
+    t.string "meal_type"
+    t.string "serving"
+    t.string "cal"
+    t.string "prot"
+    t.string "carbs"
+    t.string "fats"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,32 +1,48 @@
-<body>
-<header class = "banner">
+<html>
+  <body class ="mainFont">
+    <header class = "banner">
     
-</header>
-<main>
-<h1>Food Entries</h1>
-<%= link_to 'New Journal Entry', new_journal_path %>
-<p>
-<table>
-  <tr>
-    <th>Meal Type</th>
-    <th>Food Name</th>
-    <th>Serving Size</th>
-    <th>Calories</th>
-    <th>Carbohydrates</th>
-    <th>Fat</th>
-    <th>Protein</th>
-  </tr>
-   <tr>
-      <td>Breakfast</td>
-      <td>Oatmeal</td>
-      <td>1</td>
-      <td>350</td>
-      <td>24g</td>
-      <td>8g</td>
-      <td>6g</td>
-  </tr>
-  </main>
-</body>
-  
-</table>
-</p>
+    </header>
+    
+    <div class="main">
+      <h1>Food Entries</h1>
+      
+      <%= link_to 'New Journal Entry', new_journal_path %>
+      <br><br>
+      
+      <div class="tableDiv">
+        <table>
+          <tr id = "tableHeader">
+            <th>Meal Type</th>
+            <th>Food Item</th>
+            <th>Serving Size</th>
+            <th>Calories</th>
+            <th>Proteins</th>
+            <th>Carbs</th>
+            <th>Fats</th>
+            <th>Tools</th>
+          </tr>
+
+        <% @journals.each do |journal| %>
+          <tr>
+            <td><%= journal.meal_type %></td>
+            <td><%= journal.food_item %></td>
+            <td><%= journal.serving %></td>
+            <td><%= journal.cal %></td>
+            <td><%= journal.prot %></td>
+            <td><%= journal.carbs %></td>
+            <td><%= journal.fats %></td>
+            <td>
+                <%= link_to 'Show', journal_path(journal) %> &nbsp;
+                <%= link_to 'Edit', edit_journal_path(journal) %> &nbsp;
+                <%= link_to 'Delete', 
+                                      journal_path(journal), 
+                                      method: :delete, 
+                                      data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
