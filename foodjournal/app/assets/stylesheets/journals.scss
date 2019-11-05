@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-    background-color: #c0b566;
+    background-color: #f5f5dc;
 }
 
 .mainFont{
@@ -47,4 +47,15 @@ table, th, td {
 th, td {
   padding: 15px;
   text-align: left;
+}
+
+.button {
+  background-color: #204B24;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

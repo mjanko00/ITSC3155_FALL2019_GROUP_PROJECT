@@ -7,9 +7,6 @@
     <div class="main">
       <h1>Food Entries</h1>
       
-      <%= link_to 'New Journal Entry', new_journal_path %>
-      <br><br>
-      
       <div class="tableDiv">
         <table>
           <tr id = "tableHeader">
@@ -43,6 +40,8 @@
         <% end %>
         </table>
       </div>
+      <br>
+      <%= link_to 'New Journal Entry', new_journal_path, class: 'button' %>
     </div>
   </body>
 </html>
