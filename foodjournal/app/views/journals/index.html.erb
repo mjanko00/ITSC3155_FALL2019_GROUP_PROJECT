@@ -30,12 +30,12 @@
             <td><%= journal.carbs %></td>
             <td><%= journal.fats %></td>
             <td>
-                <%= link_to 'Show', journal_path(journal) %> &nbsp;
-                <%= link_to 'Edit', edit_journal_path(journal) %> &nbsp;
+                <%= link_to 'Show', journal_path(journal), class: 'button' %> &nbsp;
+                <%= link_to 'Edit', edit_journal_path(journal), class: 'button' %> &nbsp;
                 <%= link_to 'Delete', 
                                       journal_path(journal), 
                                       method: :delete, 
-                                      data: { confirm: 'Are you sure?' } %></td>
+                                      data: { confirm: 'Are you sure?' }, class: 'button' %></td>
           </tr>
         <% end %>
         </table>
