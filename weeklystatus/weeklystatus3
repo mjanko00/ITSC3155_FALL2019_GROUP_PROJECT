@@ -1,0 +1,15 @@
+During this week, our team will complete the base functionalities outlined in our storyboard prototype. 
+We did not discuss responsibility, but importing code from our current blog sites should not be time consuming nor should it be difficult. 
+As we import the blog base code, we will better see what blog site functions work well in our food journal, and what functions need editing. 
+The group is focused on delivering a product first and foremost. Product refinement will take place over subsequent weeks.
+
+In the past week, we created the blog app called “foodjournal.” 
+The latest commits from Tyler and Fay explain that our site has a create and show method for the journal controller.
+Kelly created the skeleton for our site’s stylesheets. 
+Nathaniel began a draft of the UML diagram for the site.
+
+For the upcoming week, the team would like to expand the site’s functionality to include all CRUD elements. 
+Eventually, the team will need to develop a backend to store the information that our user will enter, like calories, proteins, fats, and carbs.
+
+When our group meets with the TA, we will want to discuss the Git branches, Git merges, and better understand the Git push/pull process. 
+To understand these features in Git will allow our team to follow daily/weekly routines to progress with the project.
