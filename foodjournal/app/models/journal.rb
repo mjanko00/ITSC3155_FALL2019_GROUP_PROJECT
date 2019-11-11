@@ -1,3 +1,3 @@
 class Journal < ApplicationRecord
-    has_many :motivation
+    has_many :motivations
 end
