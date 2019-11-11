@@ -41,6 +41,34 @@
                 <strong>Fats:</strong>
                 <%= @journal.fats %>
             </p>
+            
+            <h2>Motivations</h2>
+<% @journal.motivation.each do |motivation| %>
+  <p>
+    <strong>Motivator:</strong>
+    <%= motivation.motivater %>
+  </p>
+ 
+  <p>
+    <strong>Motivation:</strong>
+    <%= motivation.message %>
+  </p>
+<% end %>
+
+<h2>Add a motivation:</h2>
+<%= form_for([@journal, @journal.motivations.build]) do |f| %>
+  <p>
+    <%= f.label :motivater %><br>
+    <%= f.text_field :motivater %>
+  </p>
+  <p>
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
             <p>
                 <%= link_to 'Home', journals_path, class: 'button' %>
