@@ -1,0 +1,19 @@
+For the upcoming week, the team would like to expand the site’s functionality to include all CRUD elements. 
+Eventually, the team will need to develop a backend to store the information that our user will enter, like calories, proteins, fats, and carbs.
+
+Kelly zipped the project for Sprint 2 Part 1 deliverable and submitted the assignment. 
+Nathaniel finalized the UML diagrams for Sprint 2 Part 2. 
+The UMLs will require consistent updating as the project develops. 
+As for code deployment, Tyler’s branch functions with all CRUD elements. 
+Each function, Create, Read, Update, and Delete, works properly. 
+Currently, Fay’s branch allows strings to be input for all database fields (serving size, calories, fats, proteins, carbs). 
+Together, Tyler’s branch and Fay’s branch have the individual pieces needed for the Sprint 3 deliverable.
+
+This week, we should update our master branch so that all changes are in the centralized location. 
+We were successful during Sprint 2 and want to maintain momentum. 
+With all base functionalities complete, the group can focus on data validation for user input, or aesthetic elements in HTML that produce a more professional site. 
+There may be other goals that arise during our meetings.
+
+As a team, there are no significant issues currently impacting our code development. 
+Eventually, the team would like to implement more polished site functionalities that enhance the user experience. 
+The team would appreciate a brainstorming session with the TA where we can discuss unique or complex site features that users typically enjoy.
