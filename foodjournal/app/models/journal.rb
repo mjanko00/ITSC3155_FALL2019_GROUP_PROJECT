@@ -8,5 +8,7 @@ class Journal < ApplicationRecord
     validates :prot, presence: true, length: { minimum: 1 }
     validates :carbs, presence: true, length: { minimum: 1 }
     validates :fats, presence: true, length: { minimum: 1 }
+    validates :motivator, presence: true, length: { minimum: 5 }
+    validates :message, presence: true, length: { minimum: 5 }
 
 end
