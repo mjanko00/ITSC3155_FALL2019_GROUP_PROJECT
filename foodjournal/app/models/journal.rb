@@ -1,7 +1,12 @@
 class Journal < ApplicationRecord
-<<<<<<< HEAD
-    has_many :motivation
-=======
     has_many :motivates
->>>>>>> a14fb9908db0921090b2b3d31f6fb3c7cc006f9c
+    
+    validates :meal_type, presence: true
+    validates :food_item, presence: true, length: { minimum: 5 }
+    validates :serving, presence: true, length: { minimum: 1 }
+    validates :cal, presence: true, length: { minimum: 1 }
+    validates :prot, presence: true, length: { minimum: 1 }
+    validates :carbs, presence: true, length: { minimum: 1 }
+    validates :fats, presence: true, length: { minimum: 1 }
+
 end
