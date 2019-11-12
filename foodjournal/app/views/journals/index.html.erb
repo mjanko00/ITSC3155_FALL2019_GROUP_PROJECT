@@ -29,9 +29,9 @@
             <td><%= journal.prot %></td>
             <td><%= journal.carbs %></td>
             <td><%= journal.fats %></td>
-            <td>
-                <%= link_to 'Show', journal_path(journal), class: 'button' %> &nbsp;
-                <%= link_to 'Edit', edit_journal_path(journal), class: 'button' %> &nbsp;
+            <td id="tools">
+                <%= link_to 'Show', journal_path(journal), class: 'button' %>
+                <%= link_to 'Edit', edit_journal_path(journal), class: 'button' %>
                 <%= link_to 'Delete', 
                                       journal_path(journal), 
                                       method: :delete, 

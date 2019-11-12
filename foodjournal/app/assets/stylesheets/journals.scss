@@ -27,7 +27,6 @@ body{
 table {
     width: 100%;
     border-collapse: collapse;
-
 }
 
 .tableDiv {
@@ -44,19 +43,26 @@ table, th, td {
     color: white;
 }
 
-th, td {
+th {
   padding: 15px;
   text-align: center;
 }
 
+td{
+    padding-left: 10px;
+}
 
-.button {
-  background-color: #204B24;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+#tools{
+text-align: center;   
+padding: 5px 5px;
+}
+
+.button, input[type=submit], input[type=button]{
+    background-color: #204B24;
+    border: none;
+    color: white;
+    padding: 16px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
 }

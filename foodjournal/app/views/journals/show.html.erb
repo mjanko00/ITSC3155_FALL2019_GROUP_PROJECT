@@ -6,7 +6,7 @@
         
         <div class ="main">
          
-         <h2>Review your entry:</h2>
+         <h2>Food entry:</h2>
             <p>
                 <strong>Meal Type:</strong>
                 <%= @journal.meal_type %>
@@ -42,7 +42,7 @@
                 <%= @journal.fats %>
             </p>
             
-            <h2>Motivation: </h2>
+            <h2>Motivational messages: </h2>
             <% @journal.motivates.each do |motivate| %>
                 <p>
                     <strong> Motivater: </strong>
@@ -54,8 +54,8 @@
                     <%= motivate.message %>
                 </p>
             <% end %>
-            
-            <h2>Add motivation!</h2>
+            <br>
+            <h2>Add new motivational message:</h2>
             <%= form_for([@journal, @journal.motivates.build]) do |f| %>
             <p>
                 <%= f.label :motivator %><br>
@@ -66,10 +66,9 @@
                 <%= f.text_area :message %>
             </p>
             <p>
-                <%= f.submit %>
+            <%= f.submit "Submit Motivation" %>
             </p>
             <% end %>
-
 
             <p>
                 <%= link_to 'Home', journals_path, class: 'button' %>
