@@ -44,6 +44,7 @@
             
             <h2>Motivational messages: </h2>
             <% @journal.motivates.each do |motivate| %>
+<<<<<<< HEAD
                 <p>
                     <strong> Motivator: </strong>
                     <%= motivate.motivator %>
@@ -69,6 +70,14 @@
             <%= f.submit "Submit Motivation" %>
             </p>
             <% end %>
+=======
+             
+                <%= render @journal.motivates %>  
+            <% end %>
+            
+            <h2>Add motivation!</h2>
+            <%= render 'motivates/form' %>
+>>>>>>> 88c8beb6d8ffebddce5f060812fb5f1cad7d5b6e
 
             <p>
                 <%= link_to 'Home', journals_path, class: 'button' %>
