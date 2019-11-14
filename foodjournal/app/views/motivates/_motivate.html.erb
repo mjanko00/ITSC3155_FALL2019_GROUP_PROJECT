@@ -1,4 +1,4 @@
- <p>
+<p>
     <strong> Motivater: </strong>
     <%= motivate.motivator %>
 </p>
@@ -7,3 +7,9 @@
     <strong> Motivation: </strong>
     <%= motivate.message %>
 </p>
+
+<p>
+    <%= link_to 'Destroy Comment' , [motivate.journal, motivate],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+</p>                
