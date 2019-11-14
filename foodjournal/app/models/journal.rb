@@ -1,14 +1,2 @@
 class Journal < ApplicationRecord
-    has_many :motivates
-    
-    validates :meal_type, presence: true
-    validates :food_item, presence: true, length: { minimum: 5 }
-    validates :serving, presence: true, length: { minimum: 1 }
-    validates :cal, presence: true, length: { minimum: 1 }
-    validates :prot, presence: true, length: { minimum: 1 }
-    validates :carbs, presence: true, length: { minimum: 1 }
-    validates :fats, presence: true, length: { minimum: 1 }
-    validates :motivator, presence: true, length: { minimum: 5 }
-    validates :message, presence: true, length: { minimum: 5 }
-
 end
