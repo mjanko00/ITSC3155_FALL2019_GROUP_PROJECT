@@ -43,32 +43,11 @@
             </p>
             
             <h2>Motivational messages: </h2>
-            <% @journal.motivates.each do |motivate| %>
-                <p>
-                    <strong> Motivator: </strong>
-                    <%= motivate.motivator %>
-                </p>
-                
-                <p>
-                    <strong> Motivation: </strong>
-                    <%= motivate.message %>
-                </p>
-            <% end %>
-            <br>
-            <h2>Add new motivational message:</h2>
-            <%= form_for([@journal, @journal.motivates.build]) do |f| %>
-            <p>
-                <%= f.label :motivator %><br>
-                <%= f.text_field :motivator %>
-            </p>
-            <p>
-                <%= f.label :message %><br>
-                <%= f.text_area :message %>
-            </p>
-            <p>
-            <%= f.submit "Submit Motivation" %>
-            </p>
-            <% end %>
+             
+            <%= render @journal.motivates %>  
+            
+            <h2>Add motivation!</h2>
+            <%= render 'motivates/form' %>
 
             <p>
                 <%= link_to 'Home', journals_path, class: 'button' %>
