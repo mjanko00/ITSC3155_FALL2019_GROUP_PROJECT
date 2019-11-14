@@ -13,6 +13,7 @@ class JournalsController < ApplicationController
     
     def create
         @journal = Journal.new(journal_params)
+        @journal.user = current_user
         
      if @journal.save
          redirect_to @journal

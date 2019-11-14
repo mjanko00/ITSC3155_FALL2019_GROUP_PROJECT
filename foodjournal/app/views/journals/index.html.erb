@@ -17,6 +17,7 @@
             <th>Proteins</th>
             <th>Carbs</th>
             <th>Fats</th>
+            <th>Author</th>
             <th>Tools</th>
           </tr>
 
@@ -29,6 +30,10 @@
             <td><%= journal.prot %></td>
             <td><%= journal.carbs %></td>
             <td><%= journal.fats %></td>
+            <td><% if journal.user %>
+                  <%= journal.user.name %>
+                <% end %>
+            </td>
             <td id="tools">
                 <%= link_to 'Show', journal_path(journal), class: 'button' %>
                 <%= link_to 'Edit', edit_journal_path(journal), class: 'button' %>
