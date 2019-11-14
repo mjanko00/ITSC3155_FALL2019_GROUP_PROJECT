@@ -35,15 +35,6 @@ ActiveRecord::Schema.define(version: 2019_11_14_171638) do
     t.index ["journal_id"], name: "index_motivates_on_journal_id"
   end
 
-  create_table "motivations", force: :cascade do |t|
-    t.string "motivater"
-    t.text "message"
-    t.integer "journals_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["journals_id"], name: "index_motivations_on_journals_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
