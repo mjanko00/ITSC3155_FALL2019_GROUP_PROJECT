@@ -49,3 +49,8 @@ private
     def journal_params
         params.require(:journal).permit(:meal_type, :food_item, :serving, :cal, :prot, :carbs, :fats)
     end
+    
+    def total_protein
+        total_protein = @journals.sum(:prot)
+        total_protein
+    end
