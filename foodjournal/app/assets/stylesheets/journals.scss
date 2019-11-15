@@ -61,8 +61,12 @@ padding: 5px 5px;
     background-color: #204B24;
     border: none;
     color: white;
-    padding: 16px 20px;
+    padding: 10px;
     text-decoration: none;
     cursor: pointer;
+    display: inline-block;
+}
+
+.inline {
     display: inline-block;
 }

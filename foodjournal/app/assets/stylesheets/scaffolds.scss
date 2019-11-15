@@ -1,43 +1,16 @@
-body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
+.button, input[type=submit], input[type=button] {
+    &:hover {
     color: #fff;
     background-color: #000;
   }
-}
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding: 0 5px 7px;
+    background-color: #204B24;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
 }
 
 div {
