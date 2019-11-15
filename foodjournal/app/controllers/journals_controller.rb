@@ -54,3 +54,18 @@ private
         total_protein = @journals.sum(:prot)
         total_protein
     end
+
+     def total_cal
+        total_cal = @journals.sum(:cal)
+        total_cal
+     end
+     
+    def total_fat
+        total_fat = @journals.sum(:fats)
+        total_fat
+    end
+       
+    def total_carbs
+        total_carbs = @journals.sum(:carbs)
+        total_carbs
+    end
