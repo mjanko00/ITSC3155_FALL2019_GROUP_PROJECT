@@ -5,11 +5,22 @@
     </header>
     
     <div class="main">
+      
+     <div class="row">
       <h1>Food Entries</h1>
+      <div class="pull-right range-query">
+          <%= form_tag journals_path, method: :get do %>
+           <%= text_field_tag 'search[date_from]', @search.date_from %>
+           <%= text_field_tag 'search[date_to]', @search.date_to %>
+           <%= submit_tag 'Search', class: 'button' %>
+          <% end %>
+    </div>
+      </div>
       
       <div class="tableDiv">
         <table>
           <tr id = "tableHeader">
+            <th>Date</th>
             <th>Meal Type</th>
             <th>Food Item</th>
             <th>Serving Size</th>
@@ -23,6 +34,7 @@
 
         <% @journals.each do |journal| %>
           <tr>
+            <td><%= journal.date.strftime("%Y-%m-%d") %></td>
             <td><%= journal.meal_type %></td>
             <td><%= journal.food_item %></td>
             <td><%= journal.serving %></td>
