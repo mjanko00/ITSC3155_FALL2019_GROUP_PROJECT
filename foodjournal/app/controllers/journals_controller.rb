@@ -1,7 +1,8 @@
 class JournalsController < ApplicationController
-    def index 
-        @journals = Journal.all
-    end
+     def index 
+        @search = JournalSearch.new(params[:search])
+        @journals = @search.scope
+     end
     
     def show
         @journal = Journal.find(params[:id])
@@ -47,5 +48,25 @@ end
 
 private
     def journal_params
-        params.require(:journal).permit(:meal_type, :food_item, :serving, :cal, :prot, :carbs, :fats)
+        params.require(:journal).permit(:date, :meal_type, :food_item, :serving, :cal, :prot, :carbs, :fats)
+    end
+    
+    def total_protein
+        total_protein = @journals.sum(:prot)
+        total_protein
+    end
+
+     def total_cal
+        total_cal = @journals.sum(:cal)
+        total_cal
+     end
+     
+    def total_fat
+        total_fat = @journals.sum(:fats)
+        total_fat
+    end
+       
+    def total_carbs
+        total_carbs = @journals.sum(:carbs)
+        total_carbs
     end

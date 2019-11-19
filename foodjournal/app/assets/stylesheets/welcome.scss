@@ -2,3 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.button, input[type=submit], input[type=button] {
+    &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+    background-color: #204B24;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}

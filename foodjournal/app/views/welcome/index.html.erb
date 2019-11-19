@@ -4,16 +4,24 @@
     </header>
     <div class="main">
         <h1>My Food Journal</h1>
-        <%= link_to 'My Food Journal', controller: 'journals', class: 'button' %>
-        
+       
         <p>
             <% if current_user %>
-                Logged in as <%= current_user.name %>.
+            <h3>
+                Welcome <%= current_user.name %>!
+            </h3>
+                <%= link_to 'View My Journal', controller: 'journals', class: 'button' %>
+           <br>
+                <br>
+                <br>
+                <br>
+                Not <%= current_user.name %>?
                 <%= link_to "Log out", logout_path %>
             <% else %>
                 <%= link_to "Sign Up", signup_path %> or
                 <%= link_to "Log In", login_path %>
             <% end %>
+            
         </p>
     </div>
     <footer>
