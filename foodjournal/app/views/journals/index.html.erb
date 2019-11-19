@@ -34,7 +34,7 @@
 
         <% @journals.each do |journal| %>
           <tr>
-            <td><%= journal.date.strftime("%m/%d/%Y") %></td>
+            <td><%= journal.date.strftime("%Y-%m-%d") %></td>
             <td><%= journal.meal_type %></td>
             <td><%= journal.food_item %></td>
             <td><%= journal.serving %></td>
