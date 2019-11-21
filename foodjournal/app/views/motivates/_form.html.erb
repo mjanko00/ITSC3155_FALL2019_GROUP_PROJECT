@@ -1,19 +1,5 @@
 <%= form_for([@journal, @journal.motivates.build]) do |f| %>
-
-  <% if @journal.motivates.build.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@journal.motivates.build.errors.count, "error") %> prohibited
-        this journal from being saved:
-      </h2>
-      <ul>
-        <% @journal.motivates.build.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  
     <p>
         <%= f.label :motivator %><br>
         <%= f.text_field :motivator %>
@@ -23,10 +9,6 @@
         <%= f.text_area :message %>
     </p>
     <p>
-<<<<<<< HEAD
-        <%= f.submit   "Create Motivation" %>
-=======
-        <%= f.submit "Create Motivation" %>
->>>>>>> d1ce595deb2ea15503317a3d158037133b42d6d5
+        <%= f.submit   "Create Reflection" %>
     </p>
 <% end %>
