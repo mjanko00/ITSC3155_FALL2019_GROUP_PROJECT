@@ -1,9 +1,4 @@
 <%= form_for([@journal, @journal.motivates.build]) do |f| %>
-  
-    <p>
-        <%= f.label :motivator %><br>
-        <%= f.text_field :motivator %>
-    </p>
     <p>
         <%= f.label :message %><br>
         <%= f.text_area :message %>
