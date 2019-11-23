@@ -8,7 +8,7 @@
       
      <div class="row">
       <h1>Food Entries</h1>
-      <div class="pull-right range-query">
+      <div id="search-div">
           <%= form_tag journals_path, method: :get do %>
            <%= text_field_tag 'search[date_from]', @search.date_from %>
            <%= text_field_tag 'search[date_to]', @search.date_to %>
@@ -17,7 +17,6 @@
     </div>
       </div>
       <br>
-      
       <div class="tableDiv">
         <table id="index_table">
           <tr id = "tableHeader">
@@ -35,7 +34,7 @@
 
         <% @journals.each do |journal| %>
           <tr>
-            <td><%= journal.date.strftime("%Y-%m-%d") %></td>
+            <td><%= journal.date.strftime("%m-%d-%Y") %></td>
             <td><%= journal.meal_type %></td>
             <td><%= journal.food_item %></td>
             <td><%= journal.serving %>g</td>
@@ -48,12 +47,13 @@
                 <% end %>
             </td>
             <td id="tools">
-                <%= link_to 'Show', journal_path(journal), class: 'button' %>
-                <%= link_to 'Edit', edit_journal_path(journal), class: 'button' %>
-                <%= link_to 'Delete', 
+            
+                <%= link_to icon('fas', 'eye'), journal_path(journal), class: 'button-icon' %>
+                <%= link_to icon('fas', 'edit'), edit_journal_path(journal), class: 'button-icon' %>
+                <%= link_to icon('fas', 'trash-alt'),
                                       journal_path(journal), 
                                       method: :delete, 
-                                      data: { confirm: 'Are you sure?' }, class: 'button' %></td>
+                                      data: { confirm: 'Are you sure?' }, class: 'button-icon' %></td>
           </tr>
         <% end %>
         </table>

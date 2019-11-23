@@ -63,9 +63,9 @@
                     
                     <td><%= motivate.message %></td>
                     <td id="tools">
-                        <%= link_to 'Delete' , [motivate.journal, motivate],
+                        <%= link_to icon('fas', 'trash-alt'), [motivate.journal, motivate],
                         method: :delete,
-                        data: { confirm: 'Are you sure?' } %>
+                        data: { confirm: 'Are you sure?' }, class: 'button-icon' %>
                      </td>
                   </tr>
                 <% end %>

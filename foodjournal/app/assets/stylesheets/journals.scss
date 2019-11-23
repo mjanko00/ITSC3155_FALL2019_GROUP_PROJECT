@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body{
     background-color: #f5f5dc;
 }
 
+.row{
+    display: inline-block;
+}
+
+#search-div{
+    margin-bottom: 15px;
+}
 .mainFont{
     color: #0b1a04;
     font-family: Arial;
@@ -25,7 +33,7 @@ body{
 }
 
 #reflection_table {
-    width: 75%;
+    width: 50%;
     border-collapse: collapse;
 }
 
@@ -72,12 +80,25 @@ padding: 5px 5px;
     display: inline-block;
 }
 
+.button-icon {
+    &:hover {
+    color: white;
+    background-color: #204B24;
+  }
+    border: none;
+    color: #204B24;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
 .inline {
     display: inline-block;
 }
 
 #reflection_text{
-    width: 75%;
+    width: 50%;
     height: 200px;
     padding: 12px 12px;
     border: 2px solid #ccc;
