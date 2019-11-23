@@ -41,12 +41,34 @@
                 <strong>Fats:</strong>
                 <%= @journal.fats %>
             </p>
+            <br>
             
-            <h2>Motivational messages: </h2>
-             
-            <%= render @journal.motivates %>  
-            
-            <h2>Add Reflection</h2>
+    <% if @journal.motivates.present? %>
+    <h3>Reflections:</h3>
+
+        <div class="tableDiv">
+            <table id = "reflection_table">
+                <tr id = "tableHeader">
+                    <th>Date</th>
+                    <th>Reflection</th>
+                    <th>Tools</th>
+                </tr>
+                <% @journal.motivates.each do |motivate| %>
+                 <tr>
+                    <td>DATE PLACEHOLDER</td>
+                    <td><%= motivate.message %></td>
+                    <td id="tools">
+                        <%= link_to 'Delete' , [motivate.journal, motivate],
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                     </td>
+                  </tr>
+                <% end %>
+            </table>
+        </div>
+    <% end %>
+            <br>
+            <h3>Add New Reflection:</h3>
             <%= render 'motivates/form' %>
 
             <p>

@@ -15,6 +15,6 @@ class MotivatesController < ApplicationController
     
     private 
         def motivate_params
-            params.require(:motivate).permit(:message)
+            params.require(:motivate).permit(:message, :date)
         end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_192857) do
+ActiveRecord::Schema.define(version: 2019_11_23_165107) do
 
   create_table "journals", force: :cascade do |t|
     t.string "food_item"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_192857) do
     t.integer "journal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
     t.index ["journal_id"], name: "index_motivates_on_journal_id"
   end
 
