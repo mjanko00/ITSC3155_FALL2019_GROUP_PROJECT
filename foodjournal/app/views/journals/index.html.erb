@@ -26,9 +26,9 @@
             <th>Food Item</th>
             <th>Serving Size</th>
             <th>Calories</th>
-            <th>Proteins</th>
+            <th>Protein</th>
             <th>Carbs</th>
-            <th>Fats</th>
+            <th>Fat</th>
             <th>Author</th>
             <th>Tools</th>
           </tr>
@@ -38,11 +38,11 @@
             <td><%= journal.date.strftime("%Y-%m-%d") %></td>
             <td><%= journal.meal_type %></td>
             <td><%= journal.food_item %></td>
-            <td><%= journal.serving %></td>
+            <td><%= journal.serving %>g</td>
             <td><%= journal.cal %></td>
-            <td><%= journal.prot %></td>
-            <td><%= journal.carbs %></td>
-            <td><%= journal.fats %></td>
+            <td><%= journal.prot %>g</td>
+            <td><%= journal.carbs %>g</td>
+            <td><%= journal.fats %>g</td>
             <td><% if journal.user %>
                   <%= journal.user.name %>
                 <% end %>
@@ -60,9 +60,9 @@
       </div>
       <br>
       <h3>Total Calories: <%= total_cal %></h3>
-      <h3>Total Protein: <%= total_protein %></h3>
-      <h3>Total Fat: <%= total_fat %></h3>
-      <h3>Total Carbs: <%= total_carbs %></h3>
+      <h3>Total Protein: <%= total_protein %>g</h3>
+      <h3>Total Fat: <%= total_fat %>g</h3>
+      <h3>Total Carbs: <%= total_carbs %>g</h3>
       
       <%= link_to 'New Journal Entry', new_journal_path, class: 'button' %>
     </div>

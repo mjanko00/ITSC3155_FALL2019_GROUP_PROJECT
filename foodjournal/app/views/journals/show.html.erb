@@ -19,7 +19,7 @@
 
             <p>
                 <strong>Serving Size:</strong>
-                <%= @journal.serving %>
+                <%= @journal.serving %>g
             </p>
 
             <p>
@@ -28,18 +28,18 @@
             </p>
 
             <p>
-                <strong>Proteins:</strong>
-                <%= @journal.prot %>
+                <strong>Protein:</strong>
+                <%= @journal.prot %>g
             </p>
 
             <p>
                 <strong>Carbs:</strong>
-                <%= @journal.carbs %>
+                <%= @journal.carbs %>g
             </p>
 
             <p>
-                <strong>Fats:</strong>
-                <%= @journal.fats %>
+                <strong>Fat:</strong>
+                <%= @journal.fats %>g
             </p>
             <br>
             
@@ -55,7 +55,12 @@
                 </tr>
                 <% @journal.motivates.each do |motivate| %>
                  <tr>
-                    <td>DATE PLACEHOLDER</td>
+                     <% if motivate.date? %>
+                      <td><%= motivate.date.strftime("%m-%d-%y") %></td>
+                    <% else %>
+                     <td>Date Placeholder</td>
+                    <% end %>
+                    
                     <td><%= motivate.message %></td>
                     <td id="tools">
                         <%= link_to 'Delete' , [motivate.journal, motivate],

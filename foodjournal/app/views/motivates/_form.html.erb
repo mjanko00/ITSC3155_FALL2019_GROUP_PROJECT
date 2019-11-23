@@ -1,4 +1,8 @@
 <%= form_for([@journal, @journal.motivates.build]) do |f| %>
+     <p>
+        <%= f.label :date, "Date" %><br>
+        <%= f.date_select :date %>
+    </p>
     <p>
         <%= f.label "message:" %><br>
         <%= f.text_area :message, id: "reflection_text" %>
