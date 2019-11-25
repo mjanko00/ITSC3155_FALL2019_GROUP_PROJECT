@@ -25,12 +25,4 @@ feature "Food journal user can sign up, log in, create a new food journal entry,
         expect(page).to have_content("Email: testemail123@testing.com")
     end
     
-    scenario "Food journal user successfully navigates to the log in page" do
-       visit root_path
-       expect(page).to have_content("My Food Journal")
-       click_link ("Log In")
-       expect(page).to have_content("Login")
-       expect(page).to have_content("Email")
-       expect(page).to have_content("Password")
-    end
 end
