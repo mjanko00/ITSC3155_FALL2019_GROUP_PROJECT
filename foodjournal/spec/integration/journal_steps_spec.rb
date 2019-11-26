@@ -33,4 +33,14 @@ feature "Food journal user can sign up, log in, create a new food journal entry,
        expect(page).to have_content("Email")
        expect(page).to have_content("Password")
     end
+    
+    scenario "Food journal user succeffully logs in to an existing user" do
+        visit login_path
+        expect(page).to have_content("Login")
+        fill_in "Email", with: "testemail123@testing.com"
+        fill_in "Password", with: "Testing123"
+        click_button "Login"
+        expect(page).to have_content("My Food Journal")
+        expect(page).to have_content("Welcome Test Name!")
+    end
 end
