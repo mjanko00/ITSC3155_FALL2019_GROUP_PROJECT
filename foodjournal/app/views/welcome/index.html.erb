@@ -16,10 +16,13 @@
                 <br>
                 <br>
                 Not <%= current_user.name %>?
-                <%= link_to "Log out", logout_path %>
+                <%= link_to "Log out", logout_path, class: 'button' %>
             <% else %>
-                <%= link_to "Sign Up", signup_path %> or
-                <%= link_to "Log In", login_path %>
+            New to 'My Food Journal?' Sign-up below! Otherwise, please login to view your journal.
+            <br>
+            <br>
+                <%= link_to "Sign Up", signup_path, class: 'button' %>
+                <%= link_to "Log In", login_path, class: 'button' %>
             <% end %>
             
         </p>
