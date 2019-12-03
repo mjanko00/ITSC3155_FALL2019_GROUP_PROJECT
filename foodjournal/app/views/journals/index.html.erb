@@ -28,7 +28,6 @@
             <th>Protein</th>
             <th>Carbs</th>
             <th>Fat</th>
-            <th>Author</th>
             <th>Tools</th>
           </tr>
 
@@ -42,10 +41,6 @@
             <td><%= journal.prot %>g</td>
             <td><%= journal.carbs %>g</td>
             <td><%= journal.fats %>g</td>
-            <td><% if journal.user %>
-                  <%= journal.user.name %>
-                <% end %>
-            </td>
             <td id="tools">
             
                 <%= link_to icon('fas', 'eye'), journal_path(journal), class: 'button-icon' %>
@@ -65,8 +60,6 @@
       <h3>Total Carbs: <%= total_carbs %>g</h3>
       
       <%= link_to 'New Journal Entry', new_journal_path, class: 'button' %>
-      <br>
-      <br>
       <br>
       <p>
       <%= link_to "Log out", logout_path, class: 'button' %>
