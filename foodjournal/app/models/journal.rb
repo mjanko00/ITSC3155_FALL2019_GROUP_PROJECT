@@ -3,6 +3,7 @@ class Journal < ApplicationRecord
     
     has_many :motivates, dependent: :destroy
     
+    validates :date, presence: true
     validates :meal_type, presence: true
     validates :food_item, presence: true, length: { minimum: 1 }
     validates :serving, presence: true, length: { minimum: 1 }

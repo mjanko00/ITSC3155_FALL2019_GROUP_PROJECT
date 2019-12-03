@@ -1,4 +1,5 @@
 class MotivatesController < ApplicationController
+    
     def create
         @journal = Journal.find(params[:journal_id])
         @motivate = @journal.motivates.create(motivate_params)
